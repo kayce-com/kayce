@@ -1,0 +1,114 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 500;
+}
+
+.modal {
+  height: 400px;
+  max-height: 400px;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  z-index: 9999;
+  box-shadow: 0 16px 39px -10px rgba(0, 0, 0, 0.4);
+
+  @media (min-width: $breakpoint-tablet) {
+    top: 15%;
+    left: 22.5%;
+    width: 55%;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    left: 30%;
+    width: 40%;
+  }
+
+
+  header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(246, 250, 236);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: 3rem 3.5rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: 3rem 5rem;
+    }
+  }
+
+  .close-icon {
+    align-self: center;
+  }
+
+  .modal-content {
+    padding: 3.5rem 2rem;
+    background: rgb(246, 250, 236);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: 2rem 3.5rem 1rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: 2rem 5rem 1rem;
+    }
+
+    &.--small {
+      height: fit-content;
+    }
+
+    p {
+      color: #4a4a4a;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .footer {
+    display: flex;
+    a {
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn-modal {
+      width: 100%;
+      background: $dgreen;
+      border: 0;
+      color: $white;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding: 2.5rem 2rem;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      cursor: pointer;
+
+      &:disabled {
+        background: #4A4A4A;
+      }
+
+      &:focus {
+        outline: none
+      }
+    }
+
+    .danger {
+      background: $danger;
+    }
+  }
+}

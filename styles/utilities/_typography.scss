@@ -1,0 +1,50 @@
+p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: $grey;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 1.5rem;
+  }
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 3.5rem;
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: $dgreen;
+  font-weight: 600;
+}
+
+.vue-notification {
+
+  &.warn {
+    background: #ffb648;
+    border-left-color: #f48a06;
+  }
+
+  &.error {
+    background: #E54D42;
+    border-left-color: #B82E24;
+  }
+
+  &.success {
+    background: #68CD86;
+    border-left-color: #42A85F;
+  }
+}
