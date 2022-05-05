@@ -1,0 +1,33 @@
+
+// BREAKPOINTS **/
+$breakpoint-tiny-screens: 375px;
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 1000px;
+
+// COLORS **/
+$fstrgreen: rgb(157, 203, 59);
+$fstrgreen-light: rgba(157, 203, 59, 0.3);
+$dgreen: rgb(52, 89, 72);
+$gradient: linear-gradient(to right, $dgreen -120%, $fstrgreen 130%);
+$gradient-dark: linear-gradient(to right, $dgreen -20%, $fstrgreen 130%);
+$grey: rgb(74, 74, 74);
+$grey-light: rgba(74, 74, 74, 0.3);
+$grey-medium: rgba(74, 74, 74, 0.5);
+$white: rgb(255, 255, 255);
+$danger: rgb(255, 86, 97);
+
+// CARDS **/
+.fstr__card {
+  border: none;
+  background-color: $white;
+  box-shadow: 0 16px 39px -10px rgba(52, 89, 72, 0.3);
+
+  &:focus,
+  &:hover {
+    border: 0.5px solid $fstrgreen;
+    -webkit-transform: translateY(-2rem);
+    transform: translateY(-2rem);
+    transition: all 0.2s ease-in-out;
+    color: $fstrgreen;
+  }
+}

@@ -1,0 +1,40 @@
+.btn {
+  border-radius: 5px;
+  border: 0;
+  padding: 1.5rem 4rem;
+  background: $gradient;
+  color: $white;
+  font-weight: 500;
+  font-size: 1.3rem;
+  font-family: 'Averta';
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    background: $gradient-dark;
+    box-shadow: 0 16px 39px -10px rgba(157, 203, 59, 0.3);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.btn--link {
+  background: transparent;
+  color: $dgreen;
+  padding: 0;
+
+  &.--danger {
+    color: $danger;
+  }
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    box-shadow: none;
+  }
+}
