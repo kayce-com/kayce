@@ -1,12 +1,17 @@
 [default]
 src = 'contracts'
 out = 'out'
+ffi = false
+fuzz_runs = 256
+optimizer = true
+optimizer_runs = 1000000
 libs = ['node_modules']
 remappings = [
-    '@ensdomains/=node_modules/@ensdomains/',
-    'hardhat/=node_modules/hardhat/',
-    'ds-test/=lib/ds-test/src/',
-    '@openzeppelin=lib/openzeppelin-contracts/contracts/',
+    "ds-test/=lib/ds-test/src/",
+    "solmate/=lib/solmate/src/",
+    "clones/=lib/clones-with-immutable-args/src/",
+    "openzeppelin/=lib/openzeppelin-contracts/contracts/"
 ]
+verbosity = 1
 
 # See more config options https://github.com/gakonst/foundry/tree/master/config
